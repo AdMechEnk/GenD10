@@ -1,0 +1,39 @@
+{{!-- GenD10 Actor Sheet --}}
+
+<form class="flexcol">
+  <header class="sheet-header">
+    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" width="100" height="100"/>
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+      </h1>
+    </div>
+  </header>
+
+  <section class="sheet-body">
+    <nav class="tabs">
+      <a class="item" data-tab="skills">Skills</a>
+      <a class="item" data-tab="equipment">Equipment</a>
+      <a class="item" data-tab="corruption">Corruption</a>
+      <a class="item" data-tab="description">Description</a>
+    </nav>
+    
+    <div class="tabbed-content">
+      <div class="tab skills active" data-tab="skills">
+        {{> actor-skills}}
+      </div>
+      
+      <div class="tab equipment" data-tab="equipment">
+        {{> actor-equipment}}
+      </div>
+      
+      <div class="tab corruption" data-tab="corruption">
+        {{> actor-corruption}}
+      </div>
+      
+      <div class="tab description" data-tab="description">
+        {{> actor-description}}
+      </div>
+    </div>
+  </section>
+</form>

@@ -1,0 +1,35 @@
+{{!-- GenD10 Item Sheet --}}
+
+<form class="flexcol">
+  <header class="sheet-header">
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" width="100" height="100"/>
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+      </h1>
+    </div>
+  </header>
+
+  <section class="sheet-body">
+    <nav class="tabs">
+      <a class="item" data-tab="description">Description</a>
+      <a class="item" data-tab="type">Type</a>
+    </nav>
+    
+    <div class="tabbed-content">
+      <div class="tab description active" data-tab="description">
+        <h2>Description</h2>
+        <textarea name="system.description" placeholder="Description">{{system.description}}</textarea>
+      </div>
+      
+      <div class="tab type" data-tab="type">
+        <h2>Item Type</h2>
+        <select name="system.type">
+          <option value="weapon" {{#if (eq system.type "weapon")}}selected{{/if}}>Weapon</option>
+          <option value="armor" {{#if (eq system.type "armor")}}selected{{/if}}>Armor</option>
+          <option value="general" {{#if (eq system.type "general")}}selected{{/if}}>General Item</option>
+        </select>
+      </div>
+    </div>
+  </section>
+</form>

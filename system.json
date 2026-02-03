@@ -1,0 +1,82 @@
+{
+  "id": "gend10",
+  "title": "GenD10 System",
+  "description": "Foundry VTT system for GenD10 game system",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Your Name",
+      "email": "your.email@example.com",
+      "url": "https://github.com/AdMechEnk/GenD10",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/AdMechEnk/GenD10",
+  "license": "LICENSE",
+  "readme": "README.md",
+  "bugs": "https://github.com/AdMechEnk/GenD10/issues",
+  "changelog": "CHANGELOG.md",
+  "manifest": "https://github.com/AdMechEnk/GenD10/releases/latest/download/system.json",
+  "download": "https://github.com/AdMechEnk/GenD10/releases/latest/download/system.zip",
+  "minimumCoreVersion": "11.0.0",
+  "compatibleCoreVersion": "11.0.0",
+  "scripts": [
+    "dist/system.js"
+  ],
+  "styles": [
+    "dist/system.css"
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "color": "#000000",
+    "alpha": 0.5
+  },
+  "primaryToken": "systems/gend10/assets/token.png",
+  "secondaryToken": "systems/gend10/assets/token.png",
+  "flags": {
+    "allowCustom": {
+      "actor": true,
+      "item": true
+    }
+  },
+  "settings": [
+    {
+      "name": "defaultDifficulty",
+      "label": "Default Difficulty",
+      "hint": "Sets the default difficulty for new rolls",
+      "type": "number",
+      "default": 1
+    }
+  ],
+  "initiative": "1d20 + @attributes.initiative",
+  "chatTimeFormat": "%H:%M:%S",
+  "rollMode": "roll",
+  "defaultToken": {
+    "displayName": 50,
+    "displayBars": 50,
+    "bar1": {
+      "attribute": "health"
+    },
+    "bar2": {
+      "attribute": "mana"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 30,
+      "angle": 360,
+      "color": "#000000"
+    },
+    "effects": [],
+    "flags": {}
+  }
+}

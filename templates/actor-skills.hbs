@@ -1,0 +1,12 @@
+{{!-- Actor Skills Partial --}}
+<div class="actor-skills-section">
+  <h3>Skills</h3>
+  <div class="skills-grid">
+    {{#each system.skills as |skill key|}}
+    <div class="skill-item">
+      <label>{{skill.name}}</label>
+      <input type="number" name="system.skills.{{key}}.value" value="{{skill.value}}" />
+    </div>
+    {{/each}}
+  </div>
+</div>
